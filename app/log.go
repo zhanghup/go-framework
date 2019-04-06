@@ -80,7 +80,6 @@ func (l *FileLogger) Close() error {
 	l.mu.Lock()
 	defer l.mu.Unlock()
 	return l.close()
-
 }
 
 func (l *FileLogger) close() error {
@@ -344,14 +343,20 @@ func LogError(format string, args ...interface{}) {
 	log.Println(string(debug.Stack()))
 }
 
-func SetConfig(ci IContext) {
+var logBean *FileLogger
+
+func SetLogConfig(ci IContext) {
 	conf := ci.GetContext()
 	Level = conf.Log.Level
-
-	log.SetOutput(&FileLogger{
+	logBean = &FileLogger{
 		Filename:   conf.Log.Filename,
 		MaxSize:    conf.Log.MaxSize,
 		MaxBackups: conf.Log.MaxBackups,
 		MaxAge:     conf.Log.MaxAge,
-	})
+	}
+	log.SetOutput(logBean)
+}
+
+func LogBean() *FileLogger {
+	return logBean
 }

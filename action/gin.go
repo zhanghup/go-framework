@@ -1,21 +1,19 @@
 package action
 
 import (
-	"io"
-	"io/ioutil"
-	"os"
-
 	rice "github.com/GeertJohan/go.rice"
 	"github.com/gin-gonic/gin"
 	"github.com/zhanghup/go-framework/app"
+	"io"
+	"io/ioutil"
+	"os"
 )
 
 var Gin *gin.Engine
 
-func InitGin() {
-	gin.DefaultWriter = io.MultiWriter(app.LogWriter(), os.Stdout)
-
-	Gin = gin.New()
+func Run() {
+	ginRoute()
+	// 读取配置
 	ctx := app.GetAppConfig()
 	if ctx == nil {
 		panic("系统尚未初始化！")
@@ -24,7 +22,6 @@ func InitGin() {
 	if len(port) == 0 {
 		port = ctx.Gin.HTTPPort
 	}
-
 	if ctx.Gin.TLS {
 		ssl, err := rice.FindBox("conf")
 		if err != nil {
@@ -53,10 +50,18 @@ func InitGin() {
 
 		}
 		Gin.RunTLS(":"+port, "./conf/ssl/server.crt", "./conf/ssl/server.key")
-
-	} else {
-		Gin.Run(":" + port)
-
 	}
+	Gin.Run(":" + port)
+}
+
+func InitGin() {
+
+	// gin日志
+	gin.DisableConsoleColor()
+	gin.DefaultWriter = io.MultiWriter(app.LogBean())
+
+	// 创建对象
+	Gin = gin.Default()
+
 	return
 }

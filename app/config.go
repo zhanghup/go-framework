@@ -53,11 +53,7 @@ func InitApp(afg IContext, box *rice.Box) {
 	appconfig = afg.GetContext()
 
 	// 初始化日志系统
-	SetConfig(afg)
-}
-
-func SetAppConfig(afg *Context) {
-	appconfig = afg
+	SetLogConfig(afg)
 }
 
 func GetAppConfig() *Context {

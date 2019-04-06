@@ -1,7 +1,6 @@
 package tools
 
 import (
-	"fmt"
 	"reflect"
 	"strconv"
 
@@ -29,7 +28,6 @@ func IniToInterface(cfg *ini.File, obj interface{}) interface{} {
 						if sec.HasKey(tag.Get("json")) && len(tgv.String()) >= 0 {
 							v.SetString(tgv.String())
 						} else {
-							fmt.Println(tag.Get("cfg"))
 							v.SetString(tag.Get("cfg"))
 						}
 
