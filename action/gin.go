@@ -11,7 +11,7 @@ import (
 
 var Gin *gin.Engine
 
-func Run() {
+func Run() error {
 	ginRoute()
 	// 读取配置
 	ctx := app.GetAppConfig()
@@ -49,9 +49,9 @@ func Run() {
 			ioutil.WriteFile("./conf/ssl/server.key", bs, 0666)
 
 		}
-		Gin.RunTLS(":"+port, "./conf/ssl/server.crt", "./conf/ssl/server.key")
+		return Gin.RunTLS(":"+port, "./conf/ssl/server.crt", "./conf/ssl/server.key")
 	}
-	Gin.Run(":" + port)
+	return Gin.Run(":" + port)
 }
 
 func InitGin() {

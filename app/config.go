@@ -14,6 +14,9 @@ type IContext interface {
 type Context struct {
 	// 包含一些系统级的通用配置，system 中配置的优先级最高
 	System struct {
+		Name     string `json:"name"`
+		Brief    string `json:"brief"`
+		Version  string `json:"version"`
 		HTTPPort string `json:"http-port"`
 	} `json:"system"`
 	Gin struct {
