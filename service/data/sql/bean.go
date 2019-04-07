@@ -17,3 +17,14 @@ func (bean *Bean) BeforeInsert() {
 		bean.Id = bson.NewObjectId().Hex()
 	}
 }
+
+//同步表结构
+var tableBeans = make([]interface{}, 0)
+//以下各分组的路由注册路口
+func InitTableBeans(obj ... interface{}) {
+	for _, o := range obj {
+		tableBeans = append(tableBeans, o)
+	}
+}
+
+
