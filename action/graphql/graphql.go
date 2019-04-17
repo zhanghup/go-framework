@@ -12,6 +12,9 @@ func Register(g *Graphql) gin.HandlerFunc {
 		for k, v := range field {
 			fs[k] = v.getField()
 		}
+		if len(fs) == 0 {
+			return nil
+		}
 		return graphql.NewObject(graphql.ObjectConfig{
 			Name:   name,
 			Fields: fs,
