@@ -1,4 +1,4 @@
-package config
+package context
 
 import (
 	rice "github.com/GeertJohan/go.rice"

@@ -3,12 +3,12 @@ package framework
 import (
 	"github.com/urfave/cli"
 	"github.com/zhanghup/go-framework/action"
-	"github.com/zhanghup/go-framework/config"
+	"github.com/zhanghup/go-framework/context"
 	"os"
 )
 
 func CmdStart(cmds []cli.Command) {
-	appconfig := config.GetAppConfig()
+	appconfig := context.GetAppConfig()
 	if appconfig == nil {
 		panic("配置文件未读取")
 	}

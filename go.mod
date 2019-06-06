@@ -2,8 +2,8 @@ module github.com/zhanghup/go-framework
 
 require (
 	cloud.google.com/go v0.34.0 // indirect
+	github.com/GeertJohan/go.rice v1.0.0 // indirect
 	github.com/cockroachdb/apd v1.1.0 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/denisenkom/go-mssqldb v0.0.0-20190121005146-b04fd42d9952
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/go-xorm/builder v0.3.3
@@ -22,4 +22,5 @@ require (
 	github.com/ziutek/mymysql v1.5.4
 	golang.org/x/crypto v0.0.0-20190122013713-64072686203f // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
+	gopkg.in/ini.v1 v1.42.0 // indirect
 )
