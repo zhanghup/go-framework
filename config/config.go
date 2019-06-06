@@ -1,4 +1,4 @@
-package app
+package config
 
 import (
 	rice "github.com/GeertJohan/go.rice"
