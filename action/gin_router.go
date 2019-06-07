@@ -7,7 +7,7 @@ package action
  *************************************************/
 
 import (
-	"github.com/gin-gonic/gin"
+	"github.com/zhanghup/go-framework/pkg/gin"
 	"reflect"
 )
 

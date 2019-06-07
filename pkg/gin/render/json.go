@@ -7,10 +7,10 @@ package render
 import (
 	"bytes"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/gin/internal/json"
 	"html/template"
 	"net/http"
 
-	"github.com/gin-gonic/gin/internal/json"
 )
 
 // JSON contains the given interface object.

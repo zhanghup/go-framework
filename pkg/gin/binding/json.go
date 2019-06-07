@@ -7,10 +7,10 @@ package binding
 import (
 	"bytes"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/gin/internal/json"
 	"io"
 	"net/http"
 
-	"github.com/gin-gonic/gin/internal/json"
 )
 
 // EnableDecoderUseNumber is used to call the UseNumber method on the JSON

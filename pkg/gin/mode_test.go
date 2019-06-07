@@ -5,10 +5,10 @@
 package gin
 
 import (
+	"github.com/zhanghup/go-framework/pkg/gin/binding"
 	"os"
 	"testing"
 
-	"github.com/gin-gonic/gin/binding"
 	"github.com/stretchr/testify/assert"
 )
 

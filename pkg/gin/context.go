@@ -7,6 +7,8 @@ package gin
 import (
 	"errors"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/gin/binding"
+	"github.com/zhanghup/go-framework/pkg/gin/render"
 	"io"
 	"io/ioutil"
 	"math"
@@ -19,8 +21,6 @@ import (
 	"time"
 
 	"github.com/gin-contrib/sse"
-	"github.com/gin-gonic/gin/binding"
-	"github.com/gin-gonic/gin/render"
 )
 
 // Content-Type MIME of the most common data formats.

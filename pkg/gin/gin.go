@@ -6,6 +6,7 @@ package gin
 
 import (
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/gin/render"
 	"html/template"
 	"net"
 	"net/http"
@@ -13,7 +14,6 @@ import (
 	"path"
 	"sync"
 
-	"github.com/gin-gonic/gin/render"
 )
 
 const defaultMultipartMemory = 32 << 20 // 32 MB

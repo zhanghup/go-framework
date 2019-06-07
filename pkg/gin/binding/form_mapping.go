@@ -7,12 +7,12 @@ package binding
 import (
 	"errors"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/gin/internal/json"
 	"reflect"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/gin-gonic/gin/internal/json"
 )
 
 var errUnknownType = errors.New("Unknown type")

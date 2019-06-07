@@ -7,9 +7,9 @@ package gin
 import (
 	"bytes"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/gin/internal/json"
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/json"
 )
 
 // ErrorType is an unsigned 64-bit error code as defined in the gin spec.

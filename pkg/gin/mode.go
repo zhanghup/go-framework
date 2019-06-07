@@ -5,10 +5,10 @@
 package gin
 
 import (
+	"github.com/zhanghup/go-framework/pkg/gin/binding"
 	"io"
 	"os"
 
-	"github.com/gin-gonic/gin/binding"
 )
 
 // EnvGinMode indicates environment name for gin mode.

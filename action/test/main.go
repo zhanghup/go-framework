@@ -2,9 +2,9 @@ package main
 
 import (
 	rice "github.com/GeertJohan/go.rice"
-	"github.com/gin-gonic/gin"
 	"github.com/zhanghup/go-framework/action"
 	"github.com/zhanghup/go-framework/context"
+	"github.com/zhanghup/go-framework/pkg/gin"
 	"net/http"
 )
 

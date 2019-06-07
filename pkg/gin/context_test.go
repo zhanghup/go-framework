@@ -9,6 +9,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/gin/binding"
 	"html/template"
 	"io"
 	"mime/multipart"
@@ -22,7 +23,6 @@ import (
 	"time"
 
 	"github.com/gin-contrib/sse"
-	"github.com/gin-gonic/gin/binding"
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
 

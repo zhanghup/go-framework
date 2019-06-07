@@ -5,11 +5,11 @@
 package ginS
 
 import (
+	"github.com/zhanghup/go-framework/pkg/gin"
 	"html/template"
 	"net/http"
 	"sync"
 
-	"github.com/gin-gonic/gin"
 )
 
 var once sync.Once

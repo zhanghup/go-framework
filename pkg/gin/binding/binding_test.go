@@ -8,6 +8,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"github.com/zhanghup/go-framework/pkg/gin/testdata/protoexample"
 	"io"
 	"io/ioutil"
 	"mime/multipart"
@@ -18,7 +19,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gin-gonic/gin/testdata/protoexample"
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
 	"github.com/ugorji/go/codec"
