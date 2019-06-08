@@ -3,6 +3,6 @@ git commit -m remote
 git push
 
 
-version=v0.0.7
+set version=v0.0.7
 git tag %version%
 git push origin %version%
