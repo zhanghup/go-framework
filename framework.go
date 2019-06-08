@@ -1,6 +1,2 @@
-package framework
+package app
 
-//func Begin(cmds []cli.Command) {
-//
-//	app.CmdStart(cmds)
-//}
