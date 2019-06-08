@@ -14,10 +14,10 @@ type IContext interface {
 type Context struct {
 	// 包含一些系统级的通用配置，system 中配置的优先级最高
 	System struct {
-		Name     string `json:"name"`
-		Brief    string `json:"brief"`
-		Version  string `json:"version"`
-		HTTPPort string `json:"http-port"`
+		Name     string `json:"name" cfg:"zander框架服务"`
+		Brief    string `json:"brief" cfg:"zander框架服务"`
+		Version  string `json:"version" cfg:"0.0.1"`
+		HTTPPort string `json:"http-port" cfg:"40018"`
 	} `json:"system"`
 	Gin struct {
 		Enable   bool   `json:"enable" cfg:"true"`

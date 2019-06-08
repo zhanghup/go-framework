@@ -21,7 +21,6 @@ func IniToInterface(cfg *ini.File, obj interface{}) interface{} {
 						v.Set(reflect.New(t.Elem()))
 						t = t.Elem()
 						v = v.Elem()
-
 					}
 					switch t.Kind() {
 					case reflect.String:
