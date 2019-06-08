@@ -4,5 +4,5 @@ git push
 
 
 version=v0.0.7
-git tag $version
-git push origin $version
+git tag %version%
+git push origin %version%
