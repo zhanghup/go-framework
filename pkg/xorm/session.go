@@ -112,7 +112,7 @@ func (session *Session) Close() {
 	}
 }
 
-// ContextCache enable context cache or not
+// ContextCache enable ctx cache or not
 func (session *Session) ContextCache(context ContextCache) *Session {
 	session.statement.context = context
 	return session

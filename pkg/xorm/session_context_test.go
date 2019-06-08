@@ -28,6 +28,6 @@ func TestQueryContext(t *testing.T) {
 	defer cancel()
 	has, err := testEngine.Context(ctx).Exist(&ContextQueryStruct{Name: "1"})
 	assert.Error(t, err)
-	assert.Contains(t, err.Error(), "context deadline exceeded")
+	assert.Contains(t, err.Error(), "ctx deadline exceeded")
 	assert.False(t, has)
 }

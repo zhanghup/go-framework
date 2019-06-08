@@ -1,4 +1,4 @@
-package context
+package ctx
 
 import (
 	rice "github.com/GeertJohan/go.rice"
@@ -20,6 +20,7 @@ type Context struct {
 		HTTPPort string `json:"http-port"`
 	} `json:"system"`
 	Gin struct {
+		Enable   bool   `json:"enable" cfg:"true"`
 		HTTPPort string `json:"http-port" cfg:"40018"`
 		Gzip     bool   `json:"gizp" cfg:"true"`
 		TLS      bool   `json:"tls" cfg:"false"`

@@ -2,7 +2,7 @@ package action
 
 import (
 	rice "github.com/GeertJohan/go.rice"
-	"github.com/zhanghup/go-framework/context"
+	"github.com/zhanghup/go-framework/ctx"
 	"github.com/zhanghup/go-framework/pkg/gin"
 	"io"
 	"io/ioutil"
@@ -14,7 +14,7 @@ var Gin *gin.Engine
 func Run() error {
 	ginRoute()
 	// 读取配置
-	ctx := context.GetAppConfig()
+	ctx := ctx.GetAppConfig()
 	if ctx == nil {
 		panic("系统尚未初始化！")
 	}
@@ -58,7 +58,7 @@ func InitGin() {
 
 	// gin日志
 	gin.DisableConsoleColor()
-	gin.DefaultWriter = io.MultiWriter(context.LogBean())
+	gin.DefaultWriter = io.MultiWriter(ctx.LogBean())
 
 	// 创建对象
 	Gin = gin.Default()

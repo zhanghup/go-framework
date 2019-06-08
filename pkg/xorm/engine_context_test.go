@@ -22,5 +22,5 @@ func TestPingContext(t *testing.T) {
 
 	err := testEngine.(*Engine).PingContext(ctx)
 	assert.Error(t, err)
-	assert.Contains(t, err.Error(), "context deadline exceeded")
+	assert.Contains(t, err.Error(), "ctx deadline exceeded")
 }

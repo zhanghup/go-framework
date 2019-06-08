@@ -8,14 +8,14 @@ package xorm
 
 import "context"
 
-// Context creates a session with the context
+// Context creates a session with the ctx
 func (engine *Engine) Context(ctx context.Context) *Session {
 	session := engine.NewSession()
 	session.isAutoClose = true
 	return session.Context(ctx)
 }
 
-// SetDefaultContext set the default context
+// SetDefaultContext set the default ctx
 func (engine *Engine) SetDefaultContext(ctx context.Context) {
 	engine.defaultContext = ctx
 }

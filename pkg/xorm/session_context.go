@@ -6,7 +6,7 @@ package xorm
 
 import "context"
 
-// Context sets the context on this session
+// Context sets the ctx on this session
 func (session *Session) Context(ctx context.Context) *Session {
 	session.ctx = ctx
 	return session
