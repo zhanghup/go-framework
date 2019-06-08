@@ -73,7 +73,7 @@ type LogFormatterParams struct {
 	isTerm bool
 	// BodySize is the size of the Response Body
 	BodySize int
-	// Keys are the keys set on the request's context.
+	// Keys are the keys set on the request's ctx.
 	Keys map[string]interface{}
 }
 

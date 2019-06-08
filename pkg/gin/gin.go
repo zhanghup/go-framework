@@ -354,7 +354,7 @@ func (engine *Engine) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	engine.pool.Put(c)
 }
 
-// HandleContext re-enter a context that has been rewritten.
+// HandleContext re-enter a ctx that has been rewritten.
 // This can be done by setting c.Request.URL.Path to your new target.
 // Disclaimer: You can loop yourself to death with this, use wisely.
 func (engine *Engine) HandleContext(c *Context) {

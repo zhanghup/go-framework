@@ -52,10 +52,10 @@ type Context struct {
 
 	engine *Engine
 
-	// Keys is a key/value pair exclusively for the context of each request.
+	// Keys is a key/value pair exclusively for the ctx of each request.
 	Keys map[string]interface{}
 
-	// Errors is a list of errors attached to all the handlers/middlewares who used this context.
+	// Errors is a list of errors attached to all the handlers/middlewares who used this ctx.
 	Errors errorMsgs
 
 	// Accepted defines a list of manually accepted formats for content negotiation.
@@ -85,8 +85,8 @@ func (c *Context) reset() {
 	c.queryCache = nil
 }
 
-// Copy returns a copy of the current context that can be safely used outside the request's scope.
-// This has to be used when the context has to be passed to a goroutine.
+// Copy returns a copy of the current ctx that can be safely used outside the request's scope.
+// This has to be used when the ctx has to be passed to a goroutine.
 func (c *Context) Copy() *Context {
 	var cp = *c
 	cp.writermem.ResponseWriter = nil
@@ -109,7 +109,7 @@ func (c *Context) HandlerName() string {
 	return nameOfFunction(c.handlers.Last())
 }
 
-// HandlerNames returns a list of all registered handlers for this context in descending order,
+// HandlerNames returns a list of all registered handlers for this ctx in descending order,
 // following the semantics of HandlerName()
 func (c *Context) HandlerNames() []string {
 	hn := make([]string, 0, len(c.handlers))
@@ -148,7 +148,7 @@ func (c *Context) Next() {
 	}
 }
 
-// IsAborted returns true if the current context was aborted.
+// IsAborted returns true if the current ctx was aborted.
 func (c *Context) IsAborted() bool {
 	return c.index >= abortIndex
 }
@@ -162,7 +162,7 @@ func (c *Context) Abort() {
 }
 
 // AbortWithStatus calls `Abort()` and writes the headers with the specified status code.
-// For example, a failed attempt to authenticate a request could use: context.AbortWithStatus(401).
+// For example, a failed attempt to authenticate a request could use: ctx.AbortWithStatus(401).
 func (c *Context) AbortWithStatus(code int) {
 	c.Status(code)
 	c.Writer.WriteHeaderNow()
@@ -189,7 +189,7 @@ func (c *Context) AbortWithError(code int, err error) *Error {
 /********* ERROR MANAGEMENT *********/
 /************************************/
 
-// Error attaches an error to the current context. The error is pushed to a list of errors.
+// Error attaches an error to the current ctx. The error is pushed to a list of errors.
 // It's a good idea to call Error for each error that occurred during the resolution of a request.
 // A middleware can be used to collect all the errors and push them to a database together,
 // print a log, or append it in the HTTP response.
@@ -215,7 +215,7 @@ func (c *Context) Error(err error) *Error {
 /******** METADATA MANAGEMENT********/
 /************************************/
 
-// Set is used to store a new key/value pair exclusively for this context.
+// Set is used to store a new key/value pair exclusively for this ctx.
 // It also lazy initializes  c.Keys if it was not used previously.
 func (c *Context) Set(key string, value interface{}) {
 	if c.Keys == nil {
@@ -652,7 +652,7 @@ func (c *Context) ShouldBindWith(obj interface{}, b binding.Binding) error {
 }
 
 // ShouldBindBodyWith is similar with ShouldBindWith, but it stores the request
-// body into the context, and reuse when it is called again.
+// body into the ctx, and reuse when it is called again.
 //
 // NOTE: This method reads the body before binding. So you should use
 // ShouldBindWith for better performance if you need to call only once.
@@ -1023,7 +1023,7 @@ func (c *Context) SetAccepted(formats ...string) {
 /***** GOLANG.ORG/X/NET/CONTEXT *****/
 /************************************/
 
-// Deadline returns the time when work done on behalf of this context
+// Deadline returns the time when work done on behalf of this ctx
 // should be canceled. Deadline returns ok==false when no deadline is
 // set. Successive calls to Deadline return the same results.
 func (c *Context) Deadline() (deadline time.Time, ok bool) {
@@ -1031,7 +1031,7 @@ func (c *Context) Deadline() (deadline time.Time, ok bool) {
 }
 
 // Done returns a channel that's closed when work done on behalf of this
-// context should be canceled. Done may return nil if this context can
+// ctx should be canceled. Done may return nil if this ctx can
 // never be canceled. Successive calls to Done return the same value.
 func (c *Context) Done() <-chan struct{} {
 	return nil
@@ -1041,13 +1041,13 @@ func (c *Context) Done() <-chan struct{} {
 // successive calls to Err return the same error.
 // If Done is not yet closed, Err returns nil.
 // If Done is closed, Err returns a non-nil error explaining why:
-// Canceled if the context was canceled
-// or DeadlineExceeded if the context's deadline passed.
+// Canceled if the ctx was canceled
+// or DeadlineExceeded if the ctx's deadline passed.
 func (c *Context) Err() error {
 	return nil
 }
 
-// Value returns the value associated with this context for key, or nil
+// Value returns the value associated with this ctx for key, or nil
 // if no value is associated with key. Successive calls to Value with
 // the same key returns the same result.
 func (c *Context) Value(key interface{}) interface{} {
