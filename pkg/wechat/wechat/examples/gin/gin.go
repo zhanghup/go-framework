@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/gin-gonic/gin"
-	"github.com/silenceper/wechat"
-	"github.com/silenceper/wechat/message"
+	"github.com/zhanghup/go-framework/pkg/gin"
+	"github.com/zhanghup/go-framework/pkg/wechat/wechat"
+	"github.com/zhanghup/go-framework/pkg/wechat/wechat/message"
 )
 
 func main() {

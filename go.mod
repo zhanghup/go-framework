@@ -6,7 +6,6 @@ require (
 	github.com/cockroachdb/apd v1.1.0 // indirect
 	github.com/denisenkom/go-mssqldb v0.0.0-20190121005146-b04fd42d9952
 	github.com/gin-contrib/sse v0.1.0
-	github.com/gin-gonic/gin v1.4.0
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/go-xorm/builder v0.3.3
 	github.com/go-xorm/core v0.6.2
