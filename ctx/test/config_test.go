@@ -22,7 +22,5 @@ func (this *testContext) GetContext() *ctx.Context {
 var TestContext = new(testContext)
 
 func TestIniConfig(t *testing.T) {
-	cfg := rice.MustFindBox("../../conf")
-	ctx.InitApp(TestContext, cfg)
-	tools.PrintStruct(TestContext)
+
 }
