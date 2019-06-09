@@ -1,1 +1,0 @@
-# 简化go-graphql

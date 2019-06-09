@@ -28,7 +28,7 @@ var (
 )
 
 // HandlerFunc defines the handler used by gin middleware as return value.
-type HandlerFunc func(*Context)
+type HandlerFunc func(c *Context)
 
 // HandlersChain defines a HandlerFunc array.
 type HandlersChain []HandlerFunc
