@@ -8,19 +8,19 @@ import (
 )
 
 type testLogContext struct {
-	*ctx.Context
+	*ctx.Cfg
 	System struct {
 		HttpPort string `json:"http-port"`
 	} `json:"system"`
 }
 
-func (this *testLogContext) GetContext() *ctx.Context {
-	return this.Context
+func (this *testLogContext) GetCfg() *ctx.Cfg {
+	return this.Cfg
 }
 func TestLogError(t *testing.T) {
 	TestContext := new(testLogContext)
 	cfg := rice.MustFindBox("../../conf")
-	ctx.InitApp(TestContext, cfg)
+	ctx.InitCfg(TestContext, cfg)
 	for i := 0; i < 100000; i++ {
 		//go func(i int) {
 		ctx.LogError("滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答的等待滴滴答答滴滴答答滴滴答答 %v", i)

@@ -345,8 +345,8 @@ func LogError(format string, args ...interface{}) {
 
 var logBean *FileLogger
 
-func SetLogConfig(ci IContext) {
-	conf := ci.GetContext()
+func SetLogConfig(ci ICfg) {
+	conf := ci.GetCfg()
 	Level = conf.Log.Level
 	logBean = &FileLogger{
 		Filename:   conf.Log.Filename,

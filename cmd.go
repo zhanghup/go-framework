@@ -8,9 +8,9 @@ import (
 	"os"
 )
 
-func StartCmd(afg ctx.IContext, box *rice.Box, cmds []cli.Command) {
-	ctx.InitApp(afg, box)
-	appconfig := ctx.GetAppConfig()
+func StartCmd(afg ctx.ICfg, box *rice.Box, cmds []cli.Command) {
+	ctx.InitCfg(afg, box)
+	appconfig := ctx.GetCfg()
 	if appconfig == nil {
 		panic("配置文件未读取")
 	}
@@ -36,6 +36,6 @@ func StartCmd(afg ctx.IContext, box *rice.Box, cmds []cli.Command) {
 	}
 }
 
-func StartCommon(afg ctx.IContext, box *rice.Box) {
-	ctx.InitApp(afg, box)
+func StartCommon(afg ctx.ICfg, box *rice.Box) {
+	ctx.InitCfg(afg, box)
 }

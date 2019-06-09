@@ -8,14 +8,14 @@ import (
 )
 
 func TestStartCommon(t *testing.T) {
-	TestContext := &ctx.Context{}
+	TestContext := &ctx.Cfg{}
 	cfg := rice.MustFindBox("conf")
 	StartCommon(TestContext, cfg)
 	tools.PrintStruct(TestContext)
 }
 
 func TestStartCmd(t *testing.T) {
-	TestContext := &ctx.Context{}
+	TestContext := &ctx.Cfg{}
 	cfg := rice.MustFindBox("conf")
 	StartCmd(TestContext, cfg, nil)
 }

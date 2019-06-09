@@ -6,14 +6,17 @@ package gin
 
 import (
 	"fmt"
+	rice "github.com/GeertJohan/go.rice"
+	"github.com/zhanghup/go-framework/ctx"
 	"github.com/zhanghup/go-framework/pkg/gin/render"
 	"html/template"
+	"io"
+	"io/ioutil"
 	"net"
 	"net/http"
 	"os"
 	"path"
 	"sync"
-
 )
 
 const defaultMultipartMemory = 32 << 20 // 32 MB
@@ -52,6 +55,8 @@ type RoutesInfo []RouteInfo
 // Engine is the framework's instance, it contains the muxer, middleware and configuration settings.
 // Create an instance of Engine, by using New() or Default()
 type Engine struct {
+	cfg *ctx.Cfg
+
 	RouterGroup
 
 	// Enables automatic redirection if the current route can't be matched but a
@@ -119,9 +124,10 @@ var _ IRouter = &Engine{}
 // - ForwardedByClientIP:    true
 // - UseRawPath:             false
 // - UnescapePathValues:     true
-func New() *Engine {
+func New(cfg *ctx.Cfg) *Engine {
 	debugPrintWARNINGNew()
 	engine := &Engine{
+		cfg: cfg,
 		RouterGroup: RouterGroup{
 			Handlers: nil,
 			basePath: "/",
@@ -141,6 +147,8 @@ func New() *Engine {
 		secureJsonPrefix:       "while(1);",
 	}
 	engine.RouterGroup.engine = engine
+	DisableConsoleColor()
+	DefaultWriter = io.MultiWriter(ctx.LogBean())
 	engine.pool.New = func() interface{} {
 		return engine.allocateContext()
 	}
@@ -148,10 +156,13 @@ func New() *Engine {
 }
 
 // Default returns an Engine instance with the Logger and Recovery middleware already attached.
-func Default() *Engine {
+func Default(cfg *ctx.Cfg) *Engine {
 	debugPrintWARNINGDefault()
-	engine := New()
+	engine := New(cfg)
+	engine.cfg = cfg
 	engine.Use(Logger(), Recovery())
+	DisableConsoleColor()
+	DefaultWriter = io.MultiWriter(ctx.LogBean())
 	return engine
 }
 
@@ -282,6 +293,48 @@ func iterate(path, method string, routes RoutesInfo, root *node) RoutesInfo {
 		routes = iterate(path, method, routes, child)
 	}
 	return routes
+}
+
+func (e *Engine) CfgRun() (err error) {
+	// 读取配置
+	ctx := ctx.GetCfg()
+	if ctx == nil {
+		panic("系统尚未初始化！")
+	}
+	port := ctx.System.HTTPPort
+	if len(port) == 0 {
+		port = ctx.Gin.HTTPPort
+	}
+	if ctx.Gin.TLS {
+		ssl, err := rice.FindBox("conf")
+		if err != nil {
+			panic(err)
+
+		}
+		if _, err := os.Stat("./conf/ssl/server.crt"); os.IsNotExist(err) {
+			bs, err := ssl.Bytes("ssl/server.crt")
+			if err != nil {
+				panic(err)
+
+			}
+			os.MkdirAll("./conf/ssl", 0666)
+			ioutil.WriteFile("./conf/ssl/server.crt", bs, 0666)
+
+		}
+
+		if _, err := os.Stat("./conf/ssl/server.key"); os.IsNotExist(err) {
+			bs, err := ssl.Bytes("ssl/server.key")
+			if err != nil {
+				panic(err)
+
+			}
+			os.MkdirAll("./conf/ssl", 0666)
+			ioutil.WriteFile("./conf/ssl/server.key", bs, 0666)
+
+		}
+		return e.RunTLS(":"+port, "./conf/ssl/server.crt", "./conf/ssl/server.key")
+	}
+	return e.Run(":" + port)
 }
 
 // Run attaches the router to a http.Server and starts listening and serving HTTP requests.

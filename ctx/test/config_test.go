@@ -9,14 +9,14 @@ import (
 )
 
 type testContext struct {
-	*ctx.Context
+	*ctx.Cfg
 	//System struct {
 	//HttpPort string `json:"http-port"`
 	//} `json:"system"`
 }
 
-func (this *testContext) GetContext() *ctx.Context {
-	return this.Context
+func (this *testContext) GetCfg() *ctx.Cfg {
+	return this.Cfg
 }
 
 var TestContext = new(testContext)

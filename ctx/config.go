@@ -6,12 +6,12 @@ import (
 	"gopkg.in/ini.v1"
 )
 
-type IContext interface {
-	GetContext() *Context
+type ICfg interface {
+	GetCfg() *Cfg
 }
 
 // 框架基本配置对象
-type Context struct {
+type Cfg struct {
 	// 包含一些系统级的通用配置，system 中配置的优先级最高
 	System struct {
 		Name     string `json:"name" cfg:"zander框架服务"`
@@ -34,14 +34,14 @@ type Context struct {
 	} `json:"log"`
 }
 
-func (this *Context) GetContext() *Context {
+func (this *Cfg) GetCfg() *Cfg {
 	return this
 }
 
-var appconfig *Context
+var appconfig *Cfg
 
 // 初始化框架的配置文件
-func InitApp(afg IContext, box *rice.Box) {
+func InitCfg(afg ICfg, box *rice.Box) {
 
 	f, err := box.Open("config-default.ini")
 	if err != nil {
@@ -54,12 +54,12 @@ func InitApp(afg IContext, box *rice.Box) {
 		cfg, _ := ini.Load(f)
 		tools.IniToInterface(cfg, afg)
 	}
-	appconfig = afg.GetContext()
+	appconfig = afg.GetCfg()
 
 	// 初始化日志系统
 	SetLogConfig(afg)
 }
 
-func GetAppConfig() *Context {
+func GetCfg() *Cfg {
 	return appconfig
 }
