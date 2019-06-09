@@ -124,10 +124,10 @@ var _ IRouter = &Engine{}
 // - ForwardedByClientIP:    true
 // - UseRawPath:             false
 // - UnescapePathValues:     true
-func New(cfg *ctx.Cfg) *Engine {
+func New() *Engine {
 	debugPrintWARNINGNew()
 	engine := &Engine{
-		cfg: cfg,
+		cfg: ctx.GetCfg(),
 		RouterGroup: RouterGroup{
 			Handlers: nil,
 			basePath: "/",
@@ -156,10 +156,10 @@ func New(cfg *ctx.Cfg) *Engine {
 }
 
 // Default returns an Engine instance with the Logger and Recovery middleware already attached.
-func Default(cfg *ctx.Cfg) *Engine {
+func Default() *Engine {
 	debugPrintWARNINGDefault()
-	engine := New(cfg)
-	engine.cfg = cfg
+	engine := New()
+	engine.cfg = ctx.GetCfg()
 	engine.Use(Logger(), Recovery())
 	DisableConsoleColor()
 	DefaultWriter = io.MultiWriter(ctx.LogBean())
