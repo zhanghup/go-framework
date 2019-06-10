@@ -29,3 +29,25 @@ type Menu struct {
 	Parent *string `json:"parent"`
 }
 
+type Role struct {
+	app.Bean `xorm:"extends"`
+
+	Name *string `json:"name"`
+	Desc *string `json:"desc"`
+}
+
+type RoleUser struct {
+	app.Bean `xorm:"extends"`
+
+	Role *string `json:"role"`
+	User *string `json:"user"`
+}
+
+type Perm struct {
+	app.Bean `xorm:"extends"`
+
+	Type *string `json:"type"` // 类型（menu等）
+	Role *string `json:"role"` // 角色ID
+	Oid  *string `json:"oid"`  // 对象ID
+	Mask *string `json:"mask"` // 权限
+}
