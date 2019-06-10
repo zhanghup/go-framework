@@ -7,8 +7,11 @@ import (
 
 func Login(g *gin.RouterGroup, e *xorm.Engine) {
 
-	g.POST("/register", func(c *gin.Context) {
+	g.Action("/register", func(c *gin.Context) (obj interface{}, err error) {
 
 	})
+
+
+
 }
 

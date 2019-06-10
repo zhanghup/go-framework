@@ -9,6 +9,7 @@ package xorm
 import (
 	"context"
 	"fmt"
+	"github.com/zhanghup/go-framework/ctx"
 	"os"
 	"reflect"
 	"runtime"
@@ -109,6 +110,8 @@ func NewEngine(driverName string, dataSourceName string) (*Engine, error) {
 	engine.SetMapper(core.NewCacheMapper(new(core.SnakeMapper)))
 
 	runtime.SetFinalizer(engine, close)
+
+	ctx.GetCfg().Engine.Xorm = engine
 
 	return engine, nil
 }

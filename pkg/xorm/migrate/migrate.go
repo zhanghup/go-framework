@@ -3,7 +3,7 @@ package migrate
 import (
 	"errors"
 	"fmt"
-	"github.com/zhanghup/go-framework/service/xorm"
+	"github.com/zhanghup/go-framework/pkg/xorm"
 )
 
 // MigrateFunc is the func signature for migrating.

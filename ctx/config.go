@@ -2,6 +2,9 @@ package ctx
 
 import (
 	rice "github.com/GeertJohan/go.rice"
+	"github.com/zhanghup/go-framework/pkg/gin"
+	"github.com/zhanghup/go-framework/pkg/mgo"
+	"github.com/zhanghup/go-framework/pkg/xorm"
 	"github.com/zhanghup/go-framework/tools"
 	"gopkg.in/ini.v1"
 )
@@ -32,6 +35,12 @@ type Cfg struct {
 		MaxAge     int    `json:"max-age" cfg:"0"`
 		Level      int    `json:"level" cfg:"1"`
 	} `json:"log"`
+
+	Engine struct {
+		Gin  *gin.Engine
+		Xorm *xorm.Engine
+		Mgo  *mgo.Database
+	}
 }
 
 func (this *Cfg) GetCfg() *Cfg {

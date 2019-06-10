@@ -2,9 +2,9 @@ package gin
 
 import "reflect"
 
-func (group *RouterGroup) Action(relativePath string, fn func() (interface{}, error)) IRoutes {
+func (group *RouterGroup) Action(relativePath string, fn func(c *Context) (obj interface{}, err error)) IRoutes {
 	return group.handle("POST", relativePath, []HandlerFunc{func(c *Context) {
-		obj, err := fn()
+		obj, err := fn(c)
 		if err != nil {
 			ty := reflect.TypeOf(err)
 			if ty.Kind() == reflect.Ptr {
