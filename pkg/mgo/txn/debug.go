@@ -3,10 +3,10 @@ package txn
 import (
 	"bytes"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 	"sort"
 	"sync/atomic"
 
-	"github.com/zhanghup/go-mgo/bson"
 )
 
 var (

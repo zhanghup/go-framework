@@ -38,8 +38,8 @@ import (
 	"time"
 
 	. "gopkg.in/check.v1"
-	"github.com/zhanghup/go-mgo"
-	"github.com/zhanghup/go-mgo/bson"
+	"github.com/zhanghup/go-framework/pkg/mgo"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 )
 
 func (s *S) TestRunString(c *C) {

@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/zhanghup/go-mgo"
+	"github.com/zhanghup/go-framework/pkg/mgo"
 	"gopkg.in/tomb.v2"
 )
 

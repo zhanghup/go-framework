@@ -152,7 +152,6 @@ func New() *Engine {
 	engine.pool.New = func() interface{} {
 		return engine.allocateContext()
 	}
-	ctx.GetCfg().Engine.Gin = engine
 	return engine
 }
 
@@ -164,7 +163,6 @@ func Default() *Engine {
 	engine.Use(Logger(), Recovery())
 	DisableConsoleColor()
 	DefaultWriter = io.MultiWriter(ctx.LogBean())
-	ctx.GetCfg().Engine.Gin = engine
 	return engine
 }
 

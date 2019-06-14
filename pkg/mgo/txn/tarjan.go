@@ -1,7 +1,7 @@
 package txn
 
 import (
-	"github.com/zhanghup/go-mgo/bson"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 	"sort"
 )
 

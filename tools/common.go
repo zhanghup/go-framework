@@ -1,10 +1,23 @@
 package tools
 
 import (
+	"crypto/sha256"
 	"encoding/json"
 	"fmt"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 	"time"
 )
+
+func ObjectString() *string {
+	str := bson.NewObjectId().Hex()
+	return &str
+}
+func Password(password, slat string) string {
+	sh := sha256.New()
+	sh.Write([]byte(password))
+	bts := sh.Sum([]byte(slat))
+	return fmt.Sprintf("%x", bts)
+}
 
 func Time() string {
 	return time.Now().Format("15:04:05")
@@ -52,23 +65,6 @@ func PrintStruct(obj interface{}) string {
 
 }
 
-// 以json格式输出struct对象
-//func PrintStructFmt(obj interface{}) string {
-//str, flag := sPrintStruct(obj)
-//if !flag {
-//fmt.Println(str)
-//return str
-//}
-//r, err := json.Marshal(obj)
-//if err != nil {
-//panic(err)
-//}
-
-//var out bytes.Buffer
-//err = json.Indent(&out, r, "", "\t")
-//out.WriteTo(os.Stdout)
-//return string(out.Bytes())
-//}
 func StrContains(src []string, tag string) bool {
 	for _, s := range src {
 		if s == tag {

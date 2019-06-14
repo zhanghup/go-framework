@@ -60,6 +60,14 @@ func init() {
 
 // NewEngine new a db manager according to the parameter. Currently support four
 // drivers
+func NewCfgEngine(cfg *ctx.Cfg) (*Engine, error) {
+	e, err := NewEngine(cfg.Database.Mode, cfg.Database.Url)
+	if err != nil {
+		return nil, err
+	}
+	e.ShowSQL(cfg.Database.ShowSql)
+	return e, nil
+}
 func NewEngine(driverName string, dataSourceName string) (*Engine, error) {
 	driver := core.QueryDriver(driverName)
 	if driver == nil {
@@ -110,8 +118,6 @@ func NewEngine(driverName string, dataSourceName string) (*Engine, error) {
 	engine.SetMapper(core.NewCacheMapper(new(core.SnakeMapper)))
 
 	runtime.SetFinalizer(engine, close)
-
-	ctx.GetCfg().Engine.Xorm = engine
 
 	return engine, nil
 }

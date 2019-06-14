@@ -1,7 +1,7 @@
 package bson_test
 
 import (
-	"github.com/zhanghup/go-mgo/bson"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 
 	. "gopkg.in/check.v1"
 	"reflect"

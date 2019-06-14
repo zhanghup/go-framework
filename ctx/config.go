@@ -2,9 +2,6 @@ package ctx
 
 import (
 	rice "github.com/GeertJohan/go.rice"
-	"github.com/zhanghup/go-framework/pkg/gin"
-	"github.com/zhanghup/go-framework/pkg/mgo"
-	"github.com/zhanghup/go-framework/pkg/xorm"
 	"github.com/zhanghup/go-framework/tools"
 	"gopkg.in/ini.v1"
 )
@@ -28,6 +25,11 @@ type Cfg struct {
 		Gzip     bool   `json:"gizp" cfg:"true"`
 		TLS      bool   `json:"tls" cfg:"false"`
 	} `json:"gin"`
+	Database struct {
+		Mode string `json:"mode" cfg:"mysql"`
+		Url  string `json:"url" cfg:"root:123@/test?charset=utf8"`
+		ShowSql bool `json:"show_sql" cfg:"false"`
+	} `json:"database"`
 	Log struct {
 		Filename   string `json:"filename" cfg:"./resource/log/app.log"`
 		MaxBackups int    `json:"max-backup" cfg:"0"`
@@ -35,12 +37,6 @@ type Cfg struct {
 		MaxAge     int    `json:"max-age" cfg:"0"`
 		Level      int    `json:"level" cfg:"1"`
 	} `json:"log"`
-
-	Engine struct {
-		Gin  *gin.Engine
-		Xorm *xorm.Engine
-		Mgo  *mgo.Database
-	}
 }
 
 func (this *Cfg) GetCfg() *Cfg {

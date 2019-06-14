@@ -14,8 +14,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/zhanghup/go-mgo"
-	"github.com/zhanghup/go-mgo/bson"
+	"github.com/zhanghup/go-framework/pkg/mgo"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 
 	crand "crypto/rand"
 	mrand "math/rand"

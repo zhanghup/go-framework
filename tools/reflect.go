@@ -17,7 +17,9 @@ func rftSelfDeep(ty reflect.Type, vl reflect.Value, tg reflect.StructTag, fn fun
 	switch ty.Kind() {
 	case reflect.Ptr:
 		if vl.Pointer() == 0 && vl.CanSet() {
-			vl.Set(reflect.New(ty.Elem()))
+			if !fn(ty, vl, tg) {
+				return
+			}
 		}
 		ty = ty.Elem()
 		vl = vl.Elem()

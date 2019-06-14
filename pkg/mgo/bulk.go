@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/zhanghup/go-mgo/bson"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 )
 
 // Bulk represents an operation that can be prepared with several

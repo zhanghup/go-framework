@@ -3,8 +3,8 @@ package txn
 import (
 	"fmt"
 
-	"github.com/zhanghup/go-mgo"
-	"github.com/zhanghup/go-mgo/bson"
+	"github.com/zhanghup/go-framework/pkg/mgo"
+	"github.com/zhanghup/go-framework/pkg/mgo/bson"
 )
 
 func flush(r *Runner, t *transaction) error {

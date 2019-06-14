@@ -4,7 +4,7 @@
 //
 // THIS DRIVER IS UNMAINTAINED! See here for details:
 //
-// https://github.com/go-mgo/mgo/blob/v2-unstable/README.md
+// https://github.com/mgo/mgo/blob/v2-unstable/README.md
 //
 // #########################################################
 //
