@@ -1,21 +1,18 @@
 package main
 
 import (
+	"github.com/zhanghup/go-framework/ctx/cfg"
 	"testing"
-
-	rice "github.com/GeertJohan/go.rice"
-	"github.com/zhanghup/go-framework/ctx"
-	"github.com/zhanghup/go-framework/tools"
 )
 
 type testContext struct {
-	*ctx.Cfg
+	*cfg.Cfg
 	//System struct {
 	//HttpPort string `json:"http-port"`
 	//} `json:"system"`
 }
 
-func (this *testContext) GetCfg() *ctx.Cfg {
+func (this *testContext) GetCfg() *cfg.Cfg {
 	return this.Cfg
 }
 

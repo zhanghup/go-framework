@@ -26,6 +26,7 @@ require (
 	github.com/ugorji/go v1.1.4
 	github.com/urfave/cli v1.20.0
 	github.com/ziutek/mymysql v1.5.4
+	golang.org/x/crypto v0.0.0-20190611184440-5c40567a22f8
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2
 	gopkg.in/ini.v1 v1.42.0

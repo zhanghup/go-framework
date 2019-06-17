@@ -8,6 +8,7 @@ import (
 	"fmt"
 	rice "github.com/GeertJohan/go.rice"
 	"github.com/zhanghup/go-framework/ctx"
+	"github.com/zhanghup/go-framework/ctx/cfg"
 	"github.com/zhanghup/go-framework/pkg/gin/render"
 	"html/template"
 	"io"
@@ -55,7 +56,7 @@ type RoutesInfo []RouteInfo
 // Engine is the framework's instance, it contains the muxer, middleware and configuration settings.
 // Create an instance of Engine, by using New() or Default()
 type Engine struct {
-	cfg *ctx.Cfg
+	cfg *cfg.Cfg
 
 	RouterGroup
 
@@ -127,7 +128,7 @@ var _ IRouter = &Engine{}
 func New() *Engine {
 	debugPrintWARNINGNew()
 	engine := &Engine{
-		cfg: ctx.GetCfg(),
+		cfg: cfg.GetCfg(),
 		RouterGroup: RouterGroup{
 			Handlers: nil,
 			basePath: "/",
@@ -159,7 +160,7 @@ func New() *Engine {
 func Default() *Engine {
 	debugPrintWARNINGDefault()
 	engine := New()
-	engine.cfg = ctx.GetCfg()
+	engine.cfg = cfg.GetCfg()
 	engine.Use(Logger(), Recovery())
 	DisableConsoleColor()
 	DefaultWriter = io.MultiWriter(ctx.LogBean())
@@ -297,7 +298,7 @@ func iterate(path, method string, routes RoutesInfo, root *node) RoutesInfo {
 
 func (e *Engine) CfgRun() (err error) {
 	// 读取配置
-	ctx := ctx.GetCfg()
+	ctx := cfg.GetCfg()
 	if ctx == nil {
 		panic("系统尚未初始化！")
 	}

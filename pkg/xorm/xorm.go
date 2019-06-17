@@ -9,7 +9,7 @@ package xorm
 import (
 	"context"
 	"fmt"
-	"github.com/zhanghup/go-framework/ctx"
+	"github.com/zhanghup/go-framework/ctx/cfg"
 	"os"
 	"reflect"
 	"runtime"
@@ -60,7 +60,7 @@ func init() {
 
 // NewEngine new a db manager according to the parameter. Currently support four
 // drivers
-func NewCfgEngine(cfg *ctx.Cfg) (*Engine, error) {
+func NewCfgEngine(cfg *cfg.Cfg) (*Engine, error) {
 	e, err := NewEngine(cfg.Database.Mode, cfg.Database.Url)
 	if err != nil {
 		return nil, err

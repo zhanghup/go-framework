@@ -56,10 +56,10 @@ func (group *RouterGroup) Action(relativePath string, fn func(c *Context, p inte
 				return
 			}
 			obj, err = fn(c, reflect.ValueOf(pp).Elem().Interface())
-			if err != nil {
-				Fail(c, err, obj)
-				return
-			}
+		}
+		if err != nil {
+			Fail(c, err, obj)
+			return
 		}
 
 		c.JSON(200, exception{

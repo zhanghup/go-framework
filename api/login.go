@@ -38,4 +38,7 @@ func Login(g *gin.RouterGroup, e *xorm.Engine) {
 	g.Action("/login/wx", func(c *gin.Context, p interface{}) (obj interface{}, err error) {
 		return nil, nil
 	})
+	g.Action("/login/wc", func(c *gin.Context, p interface{}) (obj interface{}, err error) {
+		return nil, nil
+	})
 }

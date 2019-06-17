@@ -1,7 +1,9 @@
 package tools
 
 import (
+	"crypto/md5"
 	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"github.com/zhanghup/go-framework/pkg/mgo/bson"
@@ -17,6 +19,11 @@ func Password(password, slat string) string {
 	sh.Write([]byte(password))
 	bts := sh.Sum([]byte(slat))
 	return fmt.Sprintf("%x", bts)
+}
+func MD5(data []byte) string {
+	h := md5.New()
+	h.Write(data)
+	return hex.EncodeToString(h.Sum(nil))
 }
 
 func Time() string {

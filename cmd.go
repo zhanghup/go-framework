@@ -2,7 +2,7 @@ package app
 
 import (
 	rice "github.com/GeertJohan/go.rice"
-	"github.com/zhanghup/go-framework/ctx"
+	"github.com/zhanghup/go-framework/ctx/cfg"
 )
 
 //func StartCmd(afg ctx.ICfg, box *rice.Box, cmds []cli.Command) {
@@ -33,6 +33,6 @@ import (
 //	}
 //}
 
-func StartCommon(afg ctx.ICfg, box *rice.Box) {
-	ctx.InitCfg(afg, box)
+func StartCommon(afg cfg.ICfg, box *rice.Box) {
+	cfg.InitCfg(afg, box)
 }

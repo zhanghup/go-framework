@@ -11,7 +11,6 @@ import (
 	"reflect"
 	"runtime/debug"
 	"strconv"
-
 )
 
 //Server struct
@@ -79,6 +78,13 @@ func (srv *Server) Validate() bool {
 	nonce := srv.Query("nonce")
 	signature := srv.Query("signature")
 	return signature == util.Signature(srv.Token, timestamp, nonce)
+}
+
+func (this *Server) NetValidate() {
+	if this.Validate() {
+		this.Writer.Write([]byte(this.Query("echostr")))
+		this.Writer.WriteHeader(200)
+	}
 }
 
 //HandleRequest 处理微信的请求

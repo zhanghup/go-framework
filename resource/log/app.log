@@ -448,3 +448,282 @@ main.main()
 2019-06-13 23:02:14 - [GIN-debug] Listening and serving HTTP on :40018
 2019-06-13 23:09:23 - [GIN] 2019/06/13 - 23:09:23 | 200 |            0s |       127.0.0.1 | POST     /logout
 2019-06-13 23:09:27 - [GIN] 2019/06/13 - 23:09:27 | 200 |            0s |       127.0.0.1 | POST     /logout
+2019-06-15 10:19:30 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:19:30 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:19:30 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:19:30 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:19:30 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:19:30 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:20:05 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:20:05 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:20:05 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:20:05 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:20:05 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:20:05 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:23:58 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:23:58 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:23:58 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:23:58 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:23:58 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:23:58 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:25:14 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:14 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:14 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:14 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:14 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:14 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:25:53 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:53 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:53 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:53 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:53 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:25:53 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:27:45 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:27:45 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:27:45 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:27:45 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:27:45 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:27:45 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:28:13 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:28:13 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:28:13 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:28:13 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:28:13 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:28:13 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:28:57 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:46:42 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:46:42 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:46:42 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:46:42 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:46:42 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:46:42 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:46:42 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:47:44 - [GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+2019-06-15 10:47:44 - [GIN] 2019/06/15 - 10:47:44 | 200 |            0s |       127.0.0.1 | POST     /upload
+2019-06-15 10:49:31 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:49:31 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:49:31 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:49:31 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:49:31 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:49:31 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:49:31 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:50:16 - [GIN] 2019/06/15 - 10:50:16 | 200 |      39.994ms |       127.0.0.1 | POST     /upload
+2019-06-15 10:51:04 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:51:04 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:51:04 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:51:04 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:51:04 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:51:04 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:51:04 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:51:35 - [GIN] 2019/06/15 - 10:51:35 | 200 |   27.2741953s |       127.0.0.1 | POST     /upload
+2019-06-15 10:52:03 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:52:03 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:52:03 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:52:03 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:52:03 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:52:03 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:52:03 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:52:08 - [GIN] 2019/06/15 - 10:52:08 | 200 |     31.9852ms |       127.0.0.1 | POST     /upload
+2019-06-15 10:53:14 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:53:14 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:53:14 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:53:14 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:53:14 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:53:14 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:53:14 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:53:17 - [GIN] 2019/06/15 - 10:53:17 | 200 |    427.0098ms |       127.0.0.1 | POST     /upload
+2019-06-15 10:54:29 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:54:29 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:54:29 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:54:29 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:54:29 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:54:29 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:54:29 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:54:33 - [GIN] 2019/06/15 - 10:54:33 | 200 |    809.7226ms |       127.0.0.1 | POST     /upload
+2019-06-15 10:57:52 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:57:52 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:57:52 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:57:52 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:57:52 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:57:52 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:57:52 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:57:55 - [GIN] 2019/06/15 - 10:57:55 | 200 |      2.0023ms |       127.0.0.1 | POST     /upload
+2019-06-15 10:58:14 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:58:14 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:58:14 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:58:14 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:58:14 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:58:14 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:58:14 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:59:28 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:59:28 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:59:28 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:59:28 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:59:28 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:59:28 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 10:59:28 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 10:59:36 - [GIN] 2019/06/15 - 10:59:36 | 200 |    2.1860633s |       127.0.0.1 | POST     /upload
+2019-06-15 11:00:21 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:00:21 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:00:21 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:00:21 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:00:21 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:00:21 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:00:21 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:00:23 - [GIN] 2019/06/15 - 11:00:23 | 200 |    1.0477967s |       127.0.0.1 | POST     /upload
+2019-06-15 11:00:26 - [GIN] 2019/06/15 - 11:00:26 | 200 |      8.9971ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:00:28 - [GIN] 2019/06/15 - 11:00:28 | 200 |      4.9929ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:00:29 - [GIN] 2019/06/15 - 11:00:29 | 200 |      2.9988ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:00:30 - [GIN] 2019/06/15 - 11:00:30 | 200 |      3.0061ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:02:25 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:02:25 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:02:25 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:02:25 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:02:25 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:02:25 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:02:25 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:04:10 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:04:10 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:04:10 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:04:10 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:04:10 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:04:10 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:04:10 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:04:10 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:04:27 - [GIN] 2019/06/15 - 11:04:27 | 200 |      3.9997ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:05:03 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:03 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:03 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:03 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:03 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:03 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:03 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:05:03 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:05:19 - [GIN] 2019/06/15 - 11:05:19 | 200 |      3.0027ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:05:58 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:58 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:58 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:58 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:58 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:58 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:05:58 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:05:58 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:06:00 - [GIN] 2019/06/15 - 11:06:00 | 200 |      4.0027ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:06:16 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:06:16 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:06:16 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:06:16 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:06:16 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:06:16 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:06:16 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:06:16 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:06:18 - [GIN] 2019/06/15 - 11:06:18 | 200 |      3.9972ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:06:24 - [GIN] 2019/06/15 - 11:06:24 | 200 |       998.4µs |       127.0.0.1 | GET      /upload/5d045f461fa8d53dbcc060ad.png
+2019-06-15 11:06:24 - [GIN] 2019/06/15 - 11:06:24 | 404 |            0s |       127.0.0.1 | GET      /favicon.ico
+2019-06-15 11:07:14 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:07:14 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:07:14 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:07:14 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:07:14 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:07:14 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:07:14 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:07:14 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:07:15 - [GIN] 2019/06/15 - 11:07:15 | 200 |            0s |       127.0.0.1 | GET      /upload/5d045f461fa8d53dbcc060ad.png
+2019-06-15 11:09:46 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:09:46 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:09:46 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:09:46 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:09:46 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:09:46 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:09:46 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:09:46 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:09:47 - [GIN] 2019/06/15 - 11:09:47 | 200 |     56.9779ms |       127.0.0.1 | GET      /upload/5d045f461fa8d53dbcc060ad.png
+2019-06-15 11:09:48 - [GIN] 2019/06/15 - 11:09:48 | 200 |     52.9879ms |       127.0.0.1 | GET      /upload/5d045f461fa8d53dbcc060ad.png
+2019-06-15 11:09:52 - [GIN] 2019/06/15 - 11:09:52 | 200 |     47.9761ms |       127.0.0.1 | GET      /upload/5d045f461fa8d53dbcc060ad.png
+2019-06-15 11:11:27 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:11:27 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:11:27 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:11:27 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:11:27 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:11:27 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:11:27 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:11:27 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:11:29 - [GIN] 2019/06/15 - 11:11:29 | 200 |     42.9853ms |       127.0.0.1 | GET      /upload/5d045f461fa8d53dbcc060ad.png
+2019-06-15 11:15:20 - [GIN-debug] POST   /register/account         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] POST   /login                    --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] POST   /logout                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] POST   /login/wx                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] POST   /login/wc                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] POST   /upload                   --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] GET    /upload/:id               --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] GET    /static/*filepath         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] HEAD   /static/*filepath         --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] GET    /favicon.ico              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] HEAD   /favicon.ico              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 11:15:20 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 11:15:28 - [GIN] 2019/06/15 - 11:15:28 | 200 |       2.999ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:15:30 - [GIN] 2019/06/15 - 11:15:30 | 200 |      1.9954ms |       127.0.0.1 | POST     /upload
+2019-06-15 11:15:31 - [GIN] 2019/06/15 - 11:15:31 | 200 |       7.998ms |       127.0.0.1 | POST     /upload
+2019-06-15 14:36:27 - [GIN-debug] POST   /zd/register/account      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] POST   /zd/login                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] POST   /zd/logout                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] POST   /zd/login/wx              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] POST   /zd/login/wc              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] POST   /zd/upload                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] GET    /zd/upload/:id            --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] GET    /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] HEAD   /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] GET    /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] HEAD   /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 14:36:27 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 15:42:07 - [GIN-debug] POST   /zd/register/account      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] POST   /zd/login                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] POST   /zd/logout                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] POST   /zd/login/wx              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] POST   /zd/login/wc              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] POST   /zd/upload                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] GET    /zd/upload/:id            --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] GET    /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] HEAD   /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] GET    /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] HEAD   /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] GET    /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] POST   /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func2 (3 handlers)
+2019-06-15 15:42:07 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 15:42:14 - [GIN] 2019/06/15 - 15:42:14 | 200 |            0s |       127.0.0.1 | GET      /zd/wc/callback?signature=51c8ff162549e98cf8db9ce48c431dd51cbd753a&echostr=2430858935088818503&timestamp=1560584515&nonce=1476767994
+2019-06-15 15:44:42 - [GIN-debug] POST   /zd/register/account      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] POST   /zd/login                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] POST   /zd/logout                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] POST   /zd/login/wx              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] POST   /zd/login/wc              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] POST   /zd/upload                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] GET    /zd/upload/:id            --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] GET    /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] HEAD   /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] GET    /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] HEAD   /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] GET    /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] POST   /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] PUT    /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] PATCH  /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] HEAD   /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] OPTIONS /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] DELETE /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] CONNECT /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] TRACE  /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-15 15:44:42 - [GIN-debug] Listening and serving HTTP on :40018
+2019-06-15 15:44:46 - [GIN] 2019/06/15 - 15:44:46 | 200 |      1.0023ms |       127.0.0.1 | GET      /zd/wc/callback?signature=51c8ff162549e98cf8db9ce48c431dd51cbd753a&echostr=2430858935088818503&timestamp=1560584515&nonce=1476767994
+2019-06-16 01:42:51 - [GIN-debug] POST   /zd/register/account      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] POST   /zd/login                 --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] POST   /zd/logout                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] POST   /zd/login/wx              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] POST   /zd/login/wc              --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] POST   /zd/upload                --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).Action.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] GET    /zd/upload/:id            --> github.com/zhanghup/go-framework/api.Resource.func2 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] GET    /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] HEAD   /zd/static/*filepath      --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] GET    /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] HEAD   /zd/favicon.ico           --> github.com/zhanghup/go-framework/pkg/gin.(*RouterGroup).StaticFile.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] GET    /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func1 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] POST   /zd/wc/callback           --> github.com/zhanghup/go-framework/api.WcCallback.func2 (3 handlers)
+2019-06-16 01:42:51 - [GIN-debug] Listening and serving HTTP on :40018

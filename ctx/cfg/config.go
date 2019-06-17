@@ -1,4 +1,4 @@
-package ctx
+package cfg
 
 import (
 	rice "github.com/GeertJohan/go.rice"
@@ -21,15 +21,24 @@ type Cfg struct {
 	} `json:"system"`
 	Gin struct {
 		Enable   bool   `json:"enable" cfg:"true"`
+		Prefix   string `json:"prefix" cfg:"zd"`
 		HTTPPort string `json:"http-port" cfg:"40018"`
 		Gzip     bool   `json:"gizp" cfg:"true"`
 		TLS      bool   `json:"tls" cfg:"false"`
 	} `json:"gin"`
 	Database struct {
-		Mode string `json:"mode" cfg:"mysql"`
-		Url  string `json:"url" cfg:"root:123@/test?charset=utf8"`
-		ShowSql bool `json:"show_sql" cfg:"false"`
+		Mode    string `json:"mode" cfg:"mysql"`
+		Url     string `json:"url" cfg:"root:123@/test?charset=utf8"`
+		ShowSql bool   `json:"show_sql" cfg:"false"`
 	} `json:"database"`
+	Wc struct {
+		AppID          string `json:"appid"`
+		AppSecret      string `json:"app_secret"`
+		Token          string `json:"token"`
+		EncodingAESKey string `json:"encoding_aes_key"`
+		PayMchID       string `json:"pay_mch_id"` //支付 - 商户 ID
+		PayKey         string `json:"pay_key"`    //支付 - 商户后台设置的支付 key
+	} `json:"wc"`
 	Log struct {
 		Filename   string `json:"filename" cfg:"./resource/log/app.log"`
 		MaxBackups int    `json:"max-backup" cfg:"0"`
