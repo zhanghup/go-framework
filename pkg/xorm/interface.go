@@ -56,6 +56,7 @@ type Interface interface {
 	Rows(bean interface{}) (*Rows, error)
 	SetExpr(string, string) *Session
 	SQL(interface{}, ...interface{}) *Session
+	SF(string, ...interface{}) *Session
 	Sum(bean interface{}, colName string) (float64, error)
 	SumInt(bean interface{}, colName string) (int64, error)
 	Sums(bean interface{}, colNames ...string) ([]float64, error)

@@ -1,8 +1,7 @@
-package ctx
+package cfg
 
 import (
 	"fmt"
-	"github.com/zhanghup/go-framework/ctx/cfg"
 	"io"
 	"io/ioutil"
 	"log"
@@ -346,7 +345,7 @@ func LogError(format string, args ...interface{}) {
 
 var logBean *FileLogger
 
-func SetLogConfig(ci cfg.ICfg) {
+func SetLogConfig(ci ICfg) {
 	conf := ci.GetCfg()
 	Level = conf.Log.Level
 	logBean = &FileLogger{

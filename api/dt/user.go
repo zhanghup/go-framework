@@ -19,6 +19,12 @@ type UserRegisterParam struct {
 	Password   *string `json:"password" ck:"true"`
 	RePassword *string `json:"re_password" ck:"true"`
 }
+// 用户名密码登录逻辑
+type UserAccountLogin struct {
+	Account  *string `json:"account" ck:"true"`
+	Password *string `json:"password" ck:"true"`
+	Code     *string `json:"code"` // 验证码
+}
 
 func (this *UserService) Register(param UserRegisterParam) (err error) {
 	s := this.DB.NewSession()
@@ -42,14 +48,6 @@ func (this *UserService) Register(param UserRegisterParam) (err error) {
 	_, err = s.Insert(user)
 	return
 }
-
-// 用户名密码登录逻辑
-type UserAccountLogin struct {
-	Account  *string `json:"account" ck:"true"`
-	Password *string `json:"password" ck:"true"`
-	Code     *string `json:"code"` // 验证码
-}
-
 func (this *UserService) Login(c *gin.Context, param UserAccountLogin) (token interface{}, err error) {
 	user := app.User{}
 	ok, err := this.DB.Where("account = ? and status = 1", param.Account).Get(&user)
@@ -57,7 +55,7 @@ func (this *UserService) Login(c *gin.Context, param UserAccountLogin) (token in
 		return nil, err
 	}
 	if !ok {
-		return nil, errors.New("用户不存在")
+		return nil, gin.NewErr("用户不存在")
 	}
 
 	flag := false
@@ -74,12 +72,10 @@ func (this *UserService) Login(c *gin.Context, param UserAccountLogin) (token in
 		tok, err := this.Base.Token(c, *user.Id, "pc")
 		return tok.Id, err
 	}
-	return nil, errors.New("登录失败")
+	return nil, gin.NewErr("登录失败")
 }
 
-type UserWxLogin struct {
-
-}
+type UserWxLogin struct{}
 
 var userService *UserService
 

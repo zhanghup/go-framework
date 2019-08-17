@@ -183,11 +183,32 @@ func (engine *Engine) SF(sqlstr string, args ...interface{}) *Session {
 	session.isAutoClose = true
 	return session.SF(sqlstr, args...)
 }
-
+func (this *Session) sf(sqlstr string, args ...interface{}) (string, map[string]interface{}) {
+	param := map[string]interface{}{}
+	pp := make([]interface{}, 0)
+	for _, p := range args {
+		ty := reflect.TypeOf(p)
+		vl := reflect.ValueOf(p)
+		if ty.Kind() == reflect.Ptr {
+			ty = ty.Elem()
+			vl = vl.Elem()
+		}
+		if ty.Kind() == reflect.Map {
+			for _, key := range vl.MapKeys() {
+				param[key.String()] = vl.MapIndex(key).Interface()
+			}
+		} else {
+			pp = append(pp, p)
+		}
+	}
+	return fmt.Sprintf(sqlstr, pp...), param
+}
 func (this *Session) SF(sqlstr string, args ...interface{}) *Session {
+
 	param := map[string]interface{}{}
 	if len(args) > 0 {
-		param = args[0].(map[string]interface{})
+		//param = args[0].(map[string]interface{})
+		sqlstr, param = this.sf(sqlstr, args...)
 	}
 	sqltemplateKey := fmt.Sprintf("__%x__", md5.Sum([]byte(sqlstr)))
 	sqlobj, err := sqltemplateCatch.Get(sqltemplateKey)

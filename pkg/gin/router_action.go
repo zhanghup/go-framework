@@ -5,6 +5,28 @@ import (
 	"reflect"
 )
 
+func (this *Context) Fail(err error, obj interface{}, statuses ...int) {
+	status := 200
+	if len(statuses) > 0 {
+		status = statuses[0]
+	}
+
+	ty := reflect.TypeOf(err)
+	if ty.Kind() == reflect.Ptr {
+		ty = ty.Elem()
+	}
+	if ty.String() == "gin.exception" {
+		this.JSON(status, err)
+		return
+	} else {
+		this.JSON(status, exception{
+			Code:    9999,
+			Message: "系统异常",
+			Data:    map[string]interface{}{"error": err.Error()},
+		})
+	}
+}
+
 func (group *RouterGroup) Action(relativePath string, fn func(c *Context, p interface{}) (obj interface{}, err error), param ...interface{}) IRoutes {
 	return group.handle("POST", relativePath, []HandlerFunc{func(c *Context) {
 		var obj interface{}
@@ -23,12 +45,12 @@ func (group *RouterGroup) Action(relativePath string, fn func(c *Context, p inte
 			// 读取参数
 			err = c.BindJSON(pp)
 			if err != nil {
-				Fail(c, NewError(9998, err.Error(), pp), pp)
+				c.Fail(NewError(9998, err.Error(), pp), pp)
 				return
 			}
 
 			flag := false
-			tools.RftStructDeep(pp, func(ty reflect.Type, vl reflect.Value, tg reflect.StructTag) bool {
+			tools.RftStructDeep(pp, func(ty reflect.Type, vl reflect.Value, tg reflect.StructTag, fieldName string) bool {
 				if tg.Get("ck") == "true" {
 					switch ty.Kind() {
 					case reflect.Ptr:
@@ -52,13 +74,13 @@ func (group *RouterGroup) Action(relativePath string, fn func(c *Context, p inte
 			})
 
 			if flag {
-				Fail(c, NewError(9998, "参数校验错误", pp), pp)
+				c.Fail(NewError(9998, "参数校验错误", pp), pp)
 				return
 			}
-			obj, err = fn(c, reflect.ValueOf(pp).Elem().Interface())
+			obj, err = fn(c, reflect.ValueOf(pp).Interface())
 		}
 		if err != nil {
-			Fail(c, err, obj)
+			c.Fail(err, obj)
 			return
 		}
 
@@ -70,19 +92,6 @@ func (group *RouterGroup) Action(relativePath string, fn func(c *Context, p inte
 	}})
 }
 
-func Fail(c *Context, err error, obj interface{}) {
-	ty := reflect.TypeOf(err)
-	if ty.Kind() == reflect.Ptr {
-		ty = ty.Elem()
-	}
-	if ty.String() == "gin.exception" {
-		c.JSON(200, err)
-		return
-	} else {
-		c.JSON(200, exception{
-			Code:    9999,
-			Message: "系统异常",
-			Data:    map[string]interface{}{"error": err.Error()},
-		})
-	}
-}
+//func Fail(c *Context, err error, obj interface{}) {
+//
+//}

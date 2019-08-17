@@ -4,48 +4,43 @@
 
 package xorm
 
-//import (
-//	"fmt"
-//	"strconv"
-//	"testing"
-//	"time"
-//
-//	"github.com/go-xorm/builder"
-//	"github.com/go-xorm/core"
-//
-//	"github.com/stretchr/testify/assert"
-//)
-//
-//func TestQueryString(t *testing.T) {
-//	assert.NoError(t, prepareEngine())
-//
-//	type GetVar2 struct {
-//		Id      int64  `xorm:"autoincr pk"`
-//		Msg     string `xorm:"varchar(255)"`
-//		Age     int
-//		Money   float32
-//		Created time.Time `xorm:"created"`
-//	}
-//
-//	assert.NoError(t, testEngine.Sync2(new(GetVar2)))
-//
-//	var data = GetVar2{
-//		Msg:   "hi",
-//		Age:   28,
-//		Money: 1.5,
-//	}
-//	_, err := testEngine.InsertOne(data)
-//	assert.NoError(t, err)
-//
-//	records, err := testEngine.QueryString("select * from " + testEngine.TableName("get_var2", true))
-//	assert.NoError(t, err)
-//	assert.Equal(t, 1, len(records))
-//	assert.Equal(t, 5, len(records[0]))
-//	assert.Equal(t, "1", records[0]["id"])
-//	assert.Equal(t, "hi", records[0]["msg"])
-//	assert.Equal(t, "28", records[0]["age"])
-//	assert.Equal(t, "1.5", records[0]["money"])
-//}
+import (
+	"testing"
+	"time"
+
+	"github.com/stretchr/testify/assert"
+)
+
+func TestQueryString(t *testing.T) {
+	assert.NoError(t, prepareEngine())
+
+	type GetVar2 struct {
+		Id      int64  `xorm:"autoincr pk"`
+		Msg     string `xorm:"varchar(255)"`
+		Age     int
+		Money   float32
+		Created time.Time `xorm:"created"`
+	}
+
+	assert.NoError(t, testEngine.Sync2(new(GetVar2)))
+
+	var data = GetVar2{
+		Msg:   "hi",
+		Age:   28,
+		Money: 1.5,
+	}
+	_, err := testEngine.InsertOne(data)
+	assert.NoError(t, err)
+
+	records, err := testEngine.QueryString("select * from " + testEngine.TableName("get_var2", true))
+	assert.NoError(t, err)
+	assert.Equal(t, 1, len(records))
+	assert.Equal(t, 5, len(records[0]))
+	assert.Equal(t, "1", records[0]["id"])
+	assert.Equal(t, "hi", records[0]["msg"])
+	assert.Equal(t, "28", records[0]["age"])
+	assert.Equal(t, "1.5", records[0]["money"])
+}
 //
 //func TestQueryString2(t *testing.T) {
 //	assert.NoError(t, prepareEngine())

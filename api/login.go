@@ -22,13 +22,13 @@ func Login(g *gin.RouterGroup, e *xorm.Engine) {
 	}
 
 	g.Action("/register/account", func(c *gin.Context, param interface{}) (obj interface{}, err error) {
-		p := param.(dt.UserRegisterParam)
-		return nil, dt.NewUserService(e).Register(p)
+		p := param.(*dt.UserRegisterParam)
+		return nil, dt.NewUserService(e).Register(*p)
 	}, dt.UserRegisterParam{})
 
 	g.Action("/login", func(c *gin.Context, p interface{}) (obj interface{}, err error) {
-		param := p.(dt.UserAccountLogin)
-		return dt.NewUserService(e).Login(c, param)
+		param := p.(*dt.UserAccountLogin)
+		return dt.NewUserService(e).Login(c, *param)
 	}, new(dt.UserAccountLogin))
 
 	g.Action("/logout", func(c *gin.Context, p interface{}) (obj interface{}, err error) {

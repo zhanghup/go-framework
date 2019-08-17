@@ -1,9 +1,23 @@
 package app
 
 import (
-	"github.com/zhanghup/go-framework/ctx"
+	"github.com/zhanghup/go-framework/ctx/cfg"
 	"github.com/zhanghup/go-framework/pkg/xorm"
 )
+
+type PageParamItem struct {
+	Operate string `json:"operate"`
+	Value   string `json:"value"`
+	Column  string `json:"column"`
+}
+type Page struct {
+	Index int  `json:"index"`
+	Size  int  `json:"size"`
+	Count bool `json:"count"`
+
+	Param map[string]interface{} `json:"param"`
+	Query []PageParamItem        `json:"query"`
+}
 
 type Bean struct {
 	Id      *string `json:"id" xorm:"Varchar(32) pk"`
@@ -19,6 +33,8 @@ type Dict struct {
 
 	Name   *string `json:"name"`
 	Remark *string `json:"remark"`
+
+	Values []DictItem `json:"values" xorm:"-"`
 }
 type DictItem struct {
 	Bean `xorm:"extends"`
@@ -104,6 +120,6 @@ type Resource struct {
 func Sync(e *xorm.Engine) {
 	err := e.Sync2(new(Dict), new(DictItem), new(Menu), new(Role), new(RoleUser), new(Perm), new(User), new(UserToken), new(Resource))
 	if err != nil {
-		ctx.LogError(err.Error())
+		cfg.LogError(err.Error())
 	}
 }

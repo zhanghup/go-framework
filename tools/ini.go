@@ -8,7 +8,7 @@ import (
 )
 
 func IniToInterface(cfg *ini.File, obj interface{}) interface{} {
-	RftStructDeep(obj, func(ty reflect.Type, vl reflect.Value, tg reflect.StructTag) bool {
+	RftStructDeep(obj, func(ty reflect.Type, vl reflect.Value, tg reflect.StructTag, fieldName string) bool {
 		if ty.Kind() == reflect.Struct && StrContains(cfg.SectionStrings(), tg.Get("json")) {
 			sec := cfg.Section(tg.Get("json"))
 			for i := 0; i < ty.NumField(); i++ {

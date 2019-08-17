@@ -6,6 +6,7 @@ import (
 	app "github.com/zhanghup/go-framework"
 	"github.com/zhanghup/go-framework/api"
 	"github.com/zhanghup/go-framework/api/deploy"
+	"github.com/zhanghup/go-framework/api/dt"
 	cfg2 "github.com/zhanghup/go-framework/ctx/cfg"
 	"github.com/zhanghup/go-framework/pkg/gin"
 	"github.com/zhanghup/go-framework/pkg/xorm"
@@ -23,12 +24,13 @@ func main() {
 	app.Sync(e)
 
 	Public := g.Group(TestContext.Gin.Prefix + "/")
-	//Auth := g.Group("/")
+	Auth := g.Group(TestContext.Gin.Prefix +"/", dt.Auth(e))
 
 	api.Login(Public, e)
 	api.Resource(Public, Public, e)
 	api.WcCallback(Public, e)
-	api.Wc(Public,e)
+	api.Wc(Public, e)
+	api.WebBase(Auth, e)
 
 	g.CfgRun()
 }

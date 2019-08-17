@@ -7,7 +7,6 @@ package gin
 import (
 	"fmt"
 	rice "github.com/GeertJohan/go.rice"
-	"github.com/zhanghup/go-framework/ctx"
 	"github.com/zhanghup/go-framework/ctx/cfg"
 	"github.com/zhanghup/go-framework/pkg/gin/render"
 	"html/template"
@@ -149,7 +148,7 @@ func New() *Engine {
 	}
 	engine.RouterGroup.engine = engine
 	DisableConsoleColor()
-	DefaultWriter = io.MultiWriter(ctx.LogBean())
+	DefaultWriter = io.MultiWriter(cfg.LogBean())
 	engine.pool.New = func() interface{} {
 		return engine.allocateContext()
 	}
@@ -163,7 +162,7 @@ func Default() *Engine {
 	engine.cfg = cfg.GetCfg()
 	engine.Use(Logger(), Recovery())
 	DisableConsoleColor()
-	DefaultWriter = io.MultiWriter(ctx.LogBean())
+	DefaultWriter = io.MultiWriter(cfg.LogBean())
 	return engine
 }
 
